@@ -2,7 +2,7 @@
 title: "Cybersécurité : Protégez vos données dans un monde connecté"
 description: "Explorez les menaces courantes en cybersécurité et découvrez des conseils pratiques pour protéger vos données personnelles et professionnelles."
 pubDate: "2025-02-18"
-heroImage: "/blogs/cybersecurity/hero-cybersecurity.webp"
+heroImage: "/blog/cybersecurity/hero-cybersecurity.webp"
 tags: ["cybersécurité", "sécurité", "protection des données"]
 ---
 
@@ -52,7 +52,7 @@ Les attaquants essaient de deviner vos mots de passe en testant des combinaisons
 
 ## Infographie : Les bases de la cybersécurité
 
-![Infographie Cybersécurité](/blogs/cybersecurity/cybersecurity-basics.webp)
+![Infographie Cybersécurité](/blog/cybersecurity/cybersecurity-basics.webp)
 
 ---
 

@@ -1,8 +1,8 @@
 ---
 title: "OAuth 2.0 : Comprendre le protocole d'autorisation moderne"
 description: "Un guide détaillé sur le fonctionnement d'OAuth 2.0, ses rôles et ses flux d'autorisation."
-pubDate: "2025-09-15"
-heroImage: "/blogs/oauth/hero-oauth.webp"
+pubDate: "2025-02-01"
+heroImage: "/blog/oauth/hero-oauth.webp"
 tags: ["oauth2", "sécurité", "authentification", "API"]
 ---
 
@@ -49,7 +49,7 @@ Ce flux permet à l'utilisateur de fournir directement ses identifiants à l'app
 
 Voici un schéma simplifié du flux d'autorisation par code :
 
-![Schéma du flux OAuth 2.0](/blogs/oauth/oauth2-flow.webp)
+![Schéma du flux OAuth 2.0](/blog/oauth/oauth2-flow.webp)
 
 ---
 

@@ -2,7 +2,7 @@
 title: "Introduction au Cloud Computing"
 description: "Découvrez les bases du cloud computing, ses avantages et ses cas d'utilisation."
 pubDate: "2025-05-04"
-heroImage: "/blogs/cloud/hero-cloud.webp"
+heroImage: "/blog/cloud/hero-cloud.webp"
 tags: ["cloud", "infrastructure", "devops"]
 ---
 
@@ -24,7 +24,7 @@ Le cloud computing est un modèle de prestation de services informatiques qui pe
 
 Voici un schéma simplifié du fonctionnement du cloud computing :
 
-![Schéma du Cloud Computing](/blogs/cloud/cloud-diagram.webp)
+![Schéma du Cloud Computing](/blog/cloud/cloud-diagram.webp)
 
 ## Sources
 - [Documentation AWS](https://aws.amazon.com/fr/documentation/)
