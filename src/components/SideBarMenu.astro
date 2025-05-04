@@ -1,21 +1,14 @@
 ---
 const { sideBarActiveItemID } = Astro.props;
 const activeClass = "bg-base-300"; // For primary color replace with `active` class
-
-import fr from '../i18n/fr.json';
-import en from '../i18n/en.json';
-
-const lang = Astro.params.lang || 'fr';
-const t = lang === 'en' ? en : fr;
-
 ---
 
 <ul class="menu grow shrink menu-md overflow-y-auto">
-    <li><a class="py-3 text-base" id="home" href="/">{t.home}</a></li>
-    <li><a class="py-3 text-base" id="projects" href="/projects">{t.projects}</a></li>
-    <li><a class="py-3 text-base" id="services" href="/services">{t.services}</a></li>
-    <li><a class="py-3 text-base" id="blog" href="/blog/">{t.blog}</a></li>
-    <li><a class="py-3 text-base" id="cv" href="/cv">{t.cv}</a></li>
+    <li><a class="py-3 text-base" id="home" href="/">Accueil</a></li>
+    <li><a class="py-3 text-base" id="projects" href="/projects">Projets</a></li>
+    <li><a class="py-3 text-base" id="services" href="/services">Services</a></li>
+    <li><a class="py-3 text-base" id="blog" href="/blog/">Blog</a></li>
+    <li><a class="py-3 text-base" id="cv" href="/cv">CV</a></li>
     <li>
         <a
             class="py-3 text-base"
