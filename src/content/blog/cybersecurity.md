@@ -3,7 +3,7 @@ title: "Cybersécurité : Protégez vos données dans un monde connecté"
 description: "Explorez les menaces courantes en cybersécurité et découvrez des conseils pratiques pour protéger vos données personnelles et professionnelles."
 pubDate: "2025-02-18"
 heroImage: "/blog/cybersecurity/hero-cybersecurity.webp"
-tags: ["cybersécurité", "sécurité", "protection des données"]
+tags: ["cybersécurité", "sécurité", "protection-des-données"]
 ---
 
 ## Introduction
