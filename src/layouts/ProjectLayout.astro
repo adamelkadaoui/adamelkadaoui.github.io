@@ -1,0 +1,63 @@
+---
+import { type ProjectSchema } from "../content/config";
+import BaseLayout from "./BaseLayout.astro";
+
+export interface Props extends ProjectSchema {}
+
+const { title, description, stack, heroImage, badge, tags = [] } = Astro.props;
+import { Image } from "astro:assets";
+---
+<BaseLayout title={title} description={description} image={heroImage} ogType="article">
+  <div class="mx-auto max-w-screen-lg mb-4">
+    <div class="flex justify-start w-full">
+      <button
+        class="relative group w-fit flex items-center pr-3 pl-8 py-1.5 flex-nowrap rounded bg-zinc-100 dark:bg-zinc-900 border border-black/15 dark:border-white/20 hover:bg-zinc-200 dark:hover:bg-zinc-800 text-white transition-all duration-300 ease-in-out"
+        onclick="history.back()"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="arrow absolute top-1/2 left-2 -translate-y-1/2 size-4 stroke-2 fill-none stroke-current">
+          <line x1="5" y1="12" x2="19" y2="12"></line>
+          <polyline points="12 5 5 12 12 19"></polyline>
+        </svg>
+        <div class="text-sm">Retour</div>
+      </button>
+    </div>
+  </div>
+
+  <main class="md:flex md:justify-center">
+    <article class="prose prose-lg max-w-[750px] prose-img:mx-auto">
+      {heroImage && <Image width={750} height={422} format="webp" src={heroImage} alt={title} class="w-full mb-6" />}
+      <h1 class="title my-2 text-4xl font-bold">{title}</h1>
+      <p class="text-sm mb-4 text-gray-500">
+        🛠️ <strong>Stack :</strong> {stack.join(", ")}
+      </p>
+      {badge && <div class="badge badge-secondary my-1">{badge}</div>}
+      {
+        tags &&
+          tags.map((tag) => (
+            <a href={`/projects/tag/${tag}`} class="badge badge-outline ml-2 no-underline">
+              {tag}
+            </a>
+          ))
+      }
+      <div class="divider my-2"></div>
+      <slot />
+    </article>
+  </main>
+
+  <!-- Bouton "Retour en haut" -->
+  <div class="mx-auto">
+    <div class="flex flex-nowrap justify-end w-full">
+      <button
+        class="relative group w-fit flex items-end pr-3 pl-8 py-1.5 flex-nowrap rounded bg-zinc-100 dark:bg-zinc-900 border border-black/15 dark:border-white/20 hover:bg-zinc-200 dark:hover:bg-zinc-800 text-white transition-all duration-300 ease-in-out"
+        id="back-to-top"
+        onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="arrow-motion absolute top-1/2 left-2 -translate-y-1/2 size-4 stroke-2 fill-none stroke-current rotate-90">
+          <line x1="5" y1="12" x2="19" y2="12" class="translate-x-2 group-hover:translate-x-0 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-in-out"></line>
+          <polyline points="12 5 5 12 12 19" class="translate-x-1 group-hover:translate-x-0 transition-transform duration-300 ease-in-out"></polyline>
+        </svg>
+        <div class="text-sm">Retour en haut</div>
+      </button>
+    </div>
+  </div>
+</BaseLayout>

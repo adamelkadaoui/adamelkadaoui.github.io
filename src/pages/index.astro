@@ -5,8 +5,10 @@ import { getCollection } from "astro:content";
 import createSlug from "../lib/createSlug";
 
 const posts = (await getCollection("blog")).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+const projects = (await getCollection("project"));
 
 const last_posts = posts.slice(0, 3);
+const last_projects = projects.slice(0, 3);
 ---
 
 <BaseLayout sideBarActiveItemID="home">
@@ -27,30 +29,21 @@ const last_posts = posts.slice(0, 3);
     <div class="text-3xl w-full font-bold mb-2">Mes derniers projets {"</>"}</div>
   </div>
 
-  <HorizontalCard
-    title="Alliance Services Propreté"
-    img="/post_img.webp"
-    desc="Développement d'un site web moderne, intuitif et responsive pour la société Alliance Services Propreté."
-    stack="🅰️ Angular 18 • 🔁 RxJS • 🎨 Bootstrap 5"
-    url="https://allianceservicesproprete.github.io"
-    badge="Nouveau"
-  />
-
-  <div class="divider my-0"></div>
-  <HorizontalCard
-    title="Projet démo 2"
-    img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    url="#"
-  />
-  <div class="divider my-0"></div>
-  <HorizontalCard
-    title="Projet démo 3"
-    img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    url="#"
-    badge="FOSS"
-  />
+  {
+    last_projects.map((project) => (
+      <>
+        <HorizontalCard
+          title={project.data.title}
+          img={project.data.heroImage}
+          desc={project.data.description}
+          url={"/projects/" + createSlug(project.data.title, project.slug)}
+          target="_self"
+          badge={project.data.badge}
+        />
+        <div class="divider my-0" />
+      </>
+    ))
+  }
 
   <div>
     <div class="text-3xl w-full font-bold mb-5 mt-10">Derniers articles du blog</div>
