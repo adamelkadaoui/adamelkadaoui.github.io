@@ -5,7 +5,7 @@ import { getCollection } from "astro:content";
 import createSlug from "../../../../lib/createSlug";
 
 export async function getStaticPaths({ paginate }) {
-  const all_projects = await getCollection("blog");
+  const all_projects = await getCollection("project");
   const all_tags = all_projects.flatMap((project) => {
     return project.data.tags || [];
   });
@@ -27,7 +27,7 @@ const params = Astro.params;
 
 <BaseLayout title={"Projets - " + params.tag} sideBarActiveItemID="blog">
   <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Blog - {params.tag}</div>
+    <div class="text-3xl w-full font-bold">Projets - {params.tag}</div>
   </div>
   {
     page.data.length === 0 ? (
