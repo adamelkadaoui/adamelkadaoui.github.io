@@ -15,17 +15,19 @@ import { Image } from "astro:assets";
 ---
 <BaseLayout title={title} description={description} image={heroImage} ogType="article">
   <div class="mx-auto max-w-screen-lg mb-4">
-    <div class="flex justify-start w-full">
-      <button
-        class="relative group w-fit flex items-center pr-3 pl-8 py-1.5 flex-nowrap rounded bg-zinc-100 dark:bg-zinc-900 border border-black/15 dark:border-white/20 hover:bg-zinc-200 dark:hover:bg-zinc-800 text-white transition-all duration-300 ease-in-out"
-        onclick="history.back()"
-      >
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="arrow absolute top-1/2 left-2 -translate-y-1/2 size-4 stroke-2 fill-none stroke-current">
-          <line x1="5" y1="12" x2="19" y2="12"></line>
-          <polyline points="12 5 5 12 12 19"></polyline>
-        </svg>
-        <div class="text-sm">Retour</div>
-      </button>
+    <div class="flex justify-between">
+      <a onclick="history.back()" class="btn btn-ghost">
+        <svg
+          class="h-6 w-6 fill-current md:h-8 md:w-8"
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+        >
+        <path d="M15.41,16.58L10.83,12L15.41,7.41L14,6L8,12L14,18L15.41,16.58Z" />
+        </svg>{" "}
+          Retour
+      </a>
     </div>
   </div>
 
@@ -57,7 +59,6 @@ import { Image } from "astro:assets";
     </article>
   </main>
 
-  <!-- Bouton "Retour en haut" -->
   <div class="mx-auto">
     <div class="flex flex-nowrap justify-end w-full">
       <button
