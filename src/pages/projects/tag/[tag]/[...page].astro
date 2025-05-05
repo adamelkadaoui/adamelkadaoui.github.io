@@ -2,19 +2,19 @@
 import BaseLayout from "@layouts/BaseLayout.astro";
 import HorizontalCard from "@components/HorizontalCard.astro";
 import { getCollection } from "astro:content";
-import createSlug from "../../../lib/createSlug";
+import createSlug from "../../../../lib/createSlug";
 
 export async function getStaticPaths({ paginate }) {
   const all_projects = await getCollection("blog");
-  const all_tags = all_projects.flatMap((post) => {
-    return post.data.tags || [];
+  const all_tags = all_projects.flatMap((project) => {
+    return project.data.tags || [];
   });
 
   return all_tags.flatMap((tag) => {
-    const filtred_posts = all_projects.filter((post) => {
-      return post.data.tags?.includes(tag);
+    const filtred_projects = all_projects.filter((project) => {
+      return project.data.tags?.includes(tag);
     });
-    return paginate(filtred_posts, {
+    return paginate(filtred_projects, {
       params: { tag },
       pageSize: 10,
     });
@@ -69,7 +69,7 @@ const params = Astro.params;
           >
             <path d="M15.41,16.58L10.83,12L15.41,7.41L14,6L8,12L14,18L15.41,16.58Z" />
           </svg>{" "}
-          Recent posts
+          Projets Récents
         </a>
       ) : (
         <div />
@@ -78,7 +78,7 @@ const params = Astro.params;
     {
       page.url.next ? (
         <a href={page.url.next} class="btn btn-ghost my-10 mx-5">
-          Older Posts{" "}
+          Anciens Projets {" "}
           <svg
             class="h-6 w-6 fill-current md:h-8 md:w-8"
             xmlns="http://www.w3.org/2000/svg"

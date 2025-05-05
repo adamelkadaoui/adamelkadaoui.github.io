@@ -6,8 +6,8 @@ import ProjectLayout from "../../layouts/ProjectLayout.astro";
 import createSlug from "../../lib/createSlug"
 
 export async function getStaticPaths() {
-  const postEntries = await getCollection("project");
-  return postEntries.map((entry) => ({
+  const projectEntries = await getCollection("project");
+  return projectEntries.map((entry) => ({
     params: { slug: createSlug(entry.data.title, entry.slug) },
     props: { entry },
   }));
@@ -31,5 +31,5 @@ const { Content } = await entry.render();
   tags={project.tags}
 >
   <Content />
-</PostLayout>
+</ProjectLayout>
 

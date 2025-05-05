@@ -16,8 +16,7 @@ import { Image } from "astro:assets";
 <BaseLayout title={title} description={description} image={heroImage} ogType="article">
   <div class="mx-auto max-w-screen-lg mb-4">
     <div class="flex justify-between">
-      <a onclick="history.back()" class="btn btn-ghost">
-        <svg
+      <button onclick="history.back()" class="btn btn-ghost flex items-center">        <svg
           class="h-6 w-6 fill-current md:h-8 md:w-8"
           xmlns="http://www.w3.org/2000/svg"
           width="24"
@@ -27,13 +26,13 @@ import { Image } from "astro:assets";
         <path d="M15.41,16.58L10.83,12L15.41,7.41L14,6L8,12L14,18L15.41,16.58Z" />
         </svg>{" "}
           Retour
-      </a>
+      </button>
     </div>
   </div>
 
   <main class="md:flex md:justify-center">
     <article class="prose prose-lg max-w-[750px] prose-img:mx-auto">
-      {heroImage && <Image width={750} height={422} format="webp" src={heroImage} alt={title} class="w-full mb-6" />}
+      {heroImage && <Image loading="eager" width={750} height={422} format="webp" src={heroImage} alt={title} class="w-full mb-6" />}
       <h1 class="title my-2 text-4xl font-bold">{title}</h1>
       {pubDate && <time>{displayDate}</time>}
       <br />
