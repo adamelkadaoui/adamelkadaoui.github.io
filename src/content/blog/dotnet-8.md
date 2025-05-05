@@ -3,7 +3,6 @@ title: "Nouveautés de .NET 8 : Une révolution pour les développeurs"
 description: "Découvrez les fonctionnalités clés de .NET 8."
 pubDate: "2024-11-28"
 heroImage: "/blog/dotnet/hero-dotnet8.webp"
-badge: ".NET"
 tags: ["dotnet", "backend", "csharp", "microsoft"]
 ---
 

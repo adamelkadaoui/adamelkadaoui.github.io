@@ -5,7 +5,6 @@ pubDate: "2025-05-01"
 heroImage: "/projects/alliance-proprete/hero-alliance-proprete.webp"
 stack: ["🅰️ Angular 18", "🔁 RxJS", "🎨 Bootstrap 5"]
 url: "https://allianceservicesproprete.github.io"
-badge: "Nettoyage"
 tags: ["web", "responsive", "UX/UI"]
 ---
 

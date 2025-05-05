@@ -3,7 +3,6 @@ title: "Tutoriel : Introduction à Docker pour les débutants"
 description: "Découvrez les bases de Docker et apprenez à créer et exécuter vos premiers conteneurs."
 pubDate: "2024-09-07"
 heroImage: "/blog/docker/hero-docker.webp"
-badge: "Docker"
 tags: ["docker", "containers", "devops"]
 ---
 

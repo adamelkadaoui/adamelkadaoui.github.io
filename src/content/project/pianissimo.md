@@ -5,7 +5,6 @@ pubDate: "2024-09-01"
 heroImage: "/projects/pianissimo/hero-pianissimo.webp"
 stack: ["🅰️ Angular 17", "⚡ Capacitor", "📱 iOS", "🤖 Android", "☕ Java"]
 url: "https://www.lih.lu/fr/domaines-de-recherche/departements-de-recherche/departement-sante-precision/activite-physique-sport-sante/pianissimo/"
-badge: "Santé"
 tags : ["oauth2", "e-santé", "openEHR", "keycloak"]
 ---
 

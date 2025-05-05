@@ -3,7 +3,6 @@ title: "Nouveautés d'Angular 19 : Ce qu'il faut savoir"
 description: "Découvrez les nouvelles fonctionnalités et améliorations apportées par Angular 19."
 pubDate: "2024-11-12"
 heroImage: "/blog/angular/hero-angular19.webp"
-badge: "Angular"
 tags: ["angular", "frontend", "javascript", "typescript"]
 ---
 

@@ -3,7 +3,6 @@ title: "IA et éthique : Un équilibre délicat"
 description: "Explorez les défis éthiques posés par l'intelligence artificielle dans notre société moderne."
 pubDate: "2024-09-10"
 heroImage: "/blog/ai/hero-ai-ethics.webp"
-badge: "IA"
 tags: ["ia", "éthique", "technologie"]
 ---
 

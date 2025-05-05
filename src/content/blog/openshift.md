@@ -3,7 +3,6 @@ title: "Tutoriel : Mettre en place un pipeline DevOps avec OpenShift"
 description: "Découvrez OpenShift, ses avantages et inconvénients, et apprenez à configurer un pipeline CI/CD pour automatiser vos déploiements."
 pubDate: "2025-03-15"
 heroImage: "/blog/openshift/hero-openshift.webp"
-badge: "DevOps"
 tags: ["devops", "openshift", "cicd", "kubernetes"]
 ---
 
