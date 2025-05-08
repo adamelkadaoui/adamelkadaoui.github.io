@@ -1,5 +1,4 @@
 ---
-// Import necessary components and configurations
 import BaseHead from "../components/BaseHead.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
@@ -8,7 +7,6 @@ import { ViewTransitions } from "astro:transitions";
 
 import { SITE_TITLE, SITE_DESCRIPTION, TRANSITION_API } from "../config";
 
-// Destructure props with default values
 const {
   image,
   title = SITE_TITLE,
@@ -22,42 +20,22 @@ const {
 <!doctype html>
 <html lang="fr" data-theme="emerald">
   <head>
-    <!-- Meta and SEO -->
-    <BaseHead title={title} description={description} image={image} ogType={ogType} />
+    <BaseHead title={title} description={description} image={image} , ogType={ogType} />
     {TRANSITION_API && <ViewTransitions />}
     <link rel="sitemap" href="/sitemap-index.xml" />
-
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CY3N8FP4XF"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag('js', new Date());
-      gtag('config', 'G-CY3N8FP4XF');
-    </script>
   </head>
   <body>
     <div class="bg-base-100 drawer lg:drawer-open">
-      <!-- Drawer toggle for sidebar -->
       <input id="my-drawer" type="checkbox" class="drawer-toggle" />
       <div class="drawer-content bg-base-100">
-        <!-- Header -->
         <Header title={SITE_TITLE} />
-
-        <!-- Main content -->
         <div class="md:flex md:justify-center">
           <main class="p-6 pt-10 lg:max-w-[900px] max-w-[100vw]">
             <slot />
           </main>
         </div>
-
-        <!-- Footer -->
         <Footer />
       </div>
-
-      <!-- Sidebar -->
       {includeSidebar && <SideBar sideBarActiveItemID={sideBarActiveItemID} />}
     </div>
   </body>
